@@ -1,0 +1,69 @@
+﻿
+<h2>圖書資料查詢</h2>
+
+
+<style>
+    .demo {
+        width: 500px;
+        padding: 5px;
+        margin-bottom: 15px
+    }
+
+        .demo th {
+            padding: 5px;
+            background: #F0F0F0;
+        }
+
+        .demo td {
+            padding: 5px;
+        }
+
+
+    .textRight {
+        text-align: right;
+    }
+</style>
+
+<form action="/" method="post" id="searchBookData">
+    <table class="demo">
+        <tr>
+            <td class="textRight"><label class="control-label " for="bookName">書名</label></td>
+            <td>
+                <input class="form-control" id="bookName" name="bookName" type="text" value="" />
+            </td>
+        </tr>
+        <tr>
+            <td class="textRight"><label class="control-label " for="bookClassID">書籍類別</label></td>
+            <td><select id="categoryDropDownList"></select></td>
+        </tr>
+        <tr>
+            <td class="textRight"><label class="control-label " for="userId">借閱人</label></td>
+            <td><select id="userDropDownList"></select></td>
+        </tr>
+        <tr>
+            <td class="textRight"><label class="control-label " for="bookStatusCode">借閱狀態</label></td>
+            <td><select id="statusDropDownList"></select></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input class="btn btn-default" type="submit" value="查詢" />
+                <button class="btn btn-default" type="reset">清除</button>
+                <a class="btn btn-default" href="/book/InsertBook">新增</a>
+
+            </td>
+        </tr>
+    </table>
+</form>
+
+<div id="bookGrid"></div>
+<div id="dialog"></div>
+
+<script src="~/Scripts/index.js"></script>
+
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+﻿
+<h2>書籍明細</h2>
+
+<style>
+    .demo {
+        width: 700px;
+        border: 1px solid #C0C0C0;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+        .demo th {
+            border: 1px solid #C0C0C0;
+            padding: 5px;
+            background: #F0F0F0;
+        }
+
+        .demo td {
+            border: 1px solid #C0C0C0;
+            padding: 5px;
+        }
+
+    .nospace {
+        white-space: nowrap;
+    }
+
+    .textRight{
+        text-align: right;
+    }
+
+
+</style>
+
+<table class="demo">
+    <tr>
+        <td class="textRight"><label class="control-label nospace" for="bookName">書名</label></td>
+        <td id="bookName"></td>
+    </tr>
+    <tr>
+        <td class="textRight"><label class="control-label nospace" for="bookAuthor">作者</label></td>
+        <td id="bookAuthor"></td>
+    </tr>
+    <tr>
+        <td class="textRight"><label class="control-label nospace" for="bookPublisher">出版商</label></td>
+        <td id="bookPublisher"></td>
+    </tr>
+    <tr>
+        <td class="textRight"><label class="control-label nospace" for="bookNote">內容簡介</label></td>
+        <td id="bookNote"></td>
+    </tr>
+    <tr>
+        <td class="textRight"><label class="control-label nospace" for="bookBoughtDate">購書日期</label></td>
+        <td id="bookBoughtDate"></td>
+    </tr>
+    <tr>
+        <td class="textRight"><label class="control-label nospace" for="bookClassName">書籍類別</label></td>
+        <td id="bookClassName"></td>
+    </tr>
+</table>
+
+<div>
+    <a href="/">回到上一頁</a>
+</div>
+
+<script src="~/Scripts/bookDetail.js"></script>
+
+
+

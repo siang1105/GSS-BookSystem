@@ -1,0 +1,95 @@
+﻿<h2>編輯書籍</h2>
+
+<style>
+    .demo {
+        width: 500px;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+        .demo th {
+            padding: 5px;
+            background: #F0F0F0;
+        }
+
+        .demo td {
+            padding: 5px;
+        }
+
+    .textRight {
+        text-align: right;
+    }
+</style>
+
+
+<form action="/book/UpdateBook" method="post" id="updateBookData">
+    <div class="form-horizontal">
+        <table class="demo">
+            <tr>
+                <td class="textRight"><label class="control-label " for="bookName">書名</label></td>
+                <td>
+                    <input class="form-control" id="bookName" name="bookName" required type="text"  />
+                </td>
+            </tr>
+            <tr>
+                <td class="textRight"><label class="control-label " for="bookAuthor">作者</label></td>
+                <td>
+                    <input class="form-control" id="bookAuthor" name="bookAuthor" required type="text"  />
+                </td>
+            </tr>
+            <tr>
+                <td class="textRight"><label class="control-label " for="bookPublisher">出版商</label></td>
+                <td>
+                    <input class="form-control" id="bookPublisher" name="bookPublisher" required type="text"  />
+                </td>
+            </tr>
+            <tr>
+                <td class="textRight"><label class="control-label " for="bookNote">內容簡介</label></td>
+                <td>
+                    <textarea class="form-control" cols="90" id="bookNote" name="bookNote" required rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class="textRight"><label class="control-label " for="bookBoughtDate">購書日期</label></td>
+                <td>
+                    <input id="bookBoughtDate" required />
+                </td>
+            </tr>
+            <tr>
+                <td class="textRight"><label class="control-label " for="bookClassID">書籍類別</label></td>
+                <td>
+                    <select id="categoryDropDownList" required></select>
+                </td>
+            </tr>
+            <tr>
+                <td class="textRight"><label class="control-label " for="bookStatusCode" >借閱狀態</label></td>
+                <td>
+                    <select id="statusDropDownList" required></select>
+                </td>
+            </tr>
+            <tr>
+                <td class="textRight"><label class="control-label " for="userId">借閱人</label></td>
+                <td>
+                    <select id="userDropDownList"></select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td class="textRight">
+                    <button type="button" id="btnDelete" onclick = "confirmDelete(event)">刪除</button>
+                    <input type="submit" value="存檔" />
+                    <input id="hidBookId" type="hidden" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
+
+<div id="dialog"></div>
+
+<div>
+    <a href="/">回到上一頁</a>
+</div>
+
+<script src="~/Scripts/updateBook.js"></script>
